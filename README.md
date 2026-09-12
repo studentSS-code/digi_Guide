@@ -1,8 +1,6 @@
-<img width="1298" height="607" alt="Screenshot 2026-09-11 161929" src="https://github.com/user-attachments/assets/d9be395e-1d7d-4b69-ace6-6a25053442a4" />
-<img width="1340" height="628" alt="Screenshot 2026-09-11 163407" src="https://github.com/user-attachments/assets/51c55e4e-58ff-46a9-b006-821fb7b6364d" />
+<img width="1533" height="727" alt="Screenshot 2026-09-12 054336" src="https://github.com/user-attachments/assets/aae815ae-bd87-4248-b723-a2d34184e734" />
 
-<img width="1347" height="633" alt="Screenshot 2026-09-11 152723" src="https://github.com/user-attachments/assets/b932d08b-b7ab-4c0a-adf8-10023f384692" />
-
+<img width="1304" height="628" alt="Screenshot 2026-09-12 053433" src="https://github.com/user-attachments/assets/cc03f635-8504-4cac-9bc1-ac074a29eed5" />
 Personal Learning Digital Twin
 1. Project Overview
 Personal Learning Digital Twin is an AI-powered platform that creates a digital representation of a student's learning state. It continuously analyzes quiz performance, study patterns, mistakes, accuracy, time taken, and topic mastery to understand how the student is learning.
@@ -19,16 +17,6 @@ Which concepts are prerequisites for their weak areas?
 How much practice is likely to be required?
 3. Proposed Solution
 The system builds a continuously changing Learning Digital Twin for every student.
-Example:
-
-Student Learning Profile
-
-Python                 91%
-Arrays                 83%
-Linked Lists           72%
-Trees                  61%
-Graphs                 51%
-Dynamic Programming    38%
 Every quiz or learning activity updates these values.
 The system can then determine:
 Current state → Weakness → Prediction → Recommendation → Improvement
