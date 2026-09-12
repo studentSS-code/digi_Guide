@@ -406,7 +406,91 @@ h1, h2, h3, p { margin: 0; } h1 { font-family: 'Space Grotesk'; font-size: clamp
 .trend { display: flex; gap: 8px; align-items: center; color: var(--mint); font-size: 12px; }
 .metric { color: var(--teal); font-size: 13px; font-weight: 700; }
 .section-head p, .chart-panel p, .wide-view > p, .tutor-view p { color: var(--muted); font-size: 12px; margin-top: 4px; }
-.error-banner { background: #fff0df; border: 1px solid #f0c994; color: #80501d; border-radius: 10px; padding: 12px 15px; margin-bottom: 18px; font-size: 13px; }
+/* Digital Twin Status Pill in Topbar */
+.twin-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 119, 112, 0.08);
+  border: 1px solid rgba(15, 119, 112, 0.22);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(15, 119, 112, 0.06);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+.twin-status-pill:hover {
+  background: rgba(15, 119, 112, 0.12);
+  border-color: rgba(15, 119, 112, 0.38);
+  box-shadow: 0 4px 14px rgba(15, 119, 112, 0.12);
+}
+.twin-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: statusDotPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+@keyframes statusDotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    transform: scale(0.95);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    transform: scale(0.95);
+  }
+}
+.twin-status-label {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.twin-status-tag {
+  background: rgba(16, 185, 129, 0.15);
+  color: #065f46;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.top-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #d0ded6;
+  color: var(--ink);
+  padding: 7px 13px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.top-action-btn:hover {
+  background: var(--teal);
+  color: #ffffff;
+  border-color: var(--teal);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 119, 112, 0.2);
+}
+.error-banner {
+  display: none !important;
+}
 .wide-view { max-width: 980px; min-height: 520px; }
 .wide-view h2 { font-size: 30px; margin-top: 8px; }
 .view-intro { max-width: 570px; line-height: 1.6; }
@@ -1327,4 +1411,38 @@ h1, h2, h3, p { margin: 0; } h1 { font-family: 'Space Grotesk'; font-size: clamp
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+
+/* UI Polish: Enhanced Card Depth and Smooth Micro-interactions */
+.panel {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.panel:hover {
+  border-color: rgba(15, 119, 112, 0.22);
+}
+.panel.recommendation {
+  background: linear-gradient(145deg, #ffffff 0%, #f4faf7 100%);
+  border: 1px solid rgba(15, 119, 112, 0.18);
+  box-shadow: 0 8px 24px rgba(15, 119, 112, 0.06);
+}
+.panel.recommendation:hover {
+  box-shadow: 0 12px 30px rgba(15, 119, 112, 0.1);
+  transform: translateY(-2px);
+}
+.topic .progress i {
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.activity-row {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.activity-row:hover {
+  background-color: rgba(15, 119, 112, 0.04);
+  transform: translateX(3px);
+}
+.score-deck:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }

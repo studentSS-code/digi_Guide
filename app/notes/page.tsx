@@ -26,7 +26,7 @@ export default function NotesPage() {
     try {
       const studentName = "Alex Smith";
       const studentSlug = studentName.toLowerCase().replace(/[^a-z0-9]/g, "-");
-      const API = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      const API = process.env.NEXT_PUBLIC_API_URL || "";
       fetch(`${API}/api/twin/${studentSlug}`)
         .then((r) => r.json())
         .then((data) => {

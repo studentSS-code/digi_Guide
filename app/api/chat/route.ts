@@ -134,7 +134,7 @@ function checkStudentAnswer(userMsg: string, topic: TopicProfile): string | null
  * Understands full conversation history, references previous messages,
  * resolves pronouns ("it", "another example", "in python"), and evaluates student answers.
  */
-export function generateContextualTutorResponse(messages: ChatMessage[]): string {
+function generateContextualTutorResponse(messages: ChatMessage[]): string {
   if (!messages.length) {
     return "Hi! I'm digiGUIDE, your computer science adaptive tutor. What concept or problem would you like to explore together?";
   }
