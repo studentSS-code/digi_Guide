@@ -17,16 +17,6 @@ Which concepts are prerequisites for their weak areas?
 How much practice is likely to be required?
 3. Proposed Solution
 The system builds a continuously changing Learning Digital Twin for every student.
-Example:
-
-Student Learning Profile
-
-Python                 91%
-Arrays                 83%
-Linked Lists           72%
-Trees                  61%
-Graphs                 51%
-Dynamic Programming    38%
 Every quiz or learning activity updates these values.
 The system can then determine:
 Current state → Weakness → Prediction → Recommendation → Improvement
